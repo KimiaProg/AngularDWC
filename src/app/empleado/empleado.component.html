@@ -1,0 +1,33 @@
+<head>
+    <link rel="stylesheet" href="./empleado.component.css">
+</head>
+<p>empleado works!</p>
+<ul>
+    <li>{{emple.nombre}}{{emple.edad}}</li>
+</ul>
+
+<ul [ngStyle]="{
+    color:colorEmple
+}"
+ *ngFor="let emple of emples">
+    <li>{{emple}}</li>
+</ul>
+
+<input type="text" [(ngModel)]="colorEmple">
+<div [ngSwitch]="colorEmple">
+    <p *ngSwitchCase="'red'" [ngStyle]="{color:colorEmple}">
+        Este color no es mi favorito
+    </p>
+    <p *ngSwitchCase="'yellow'" [ngStyle]="{color:colorEmple}">
+        Este color es mi favorito
+    </p>
+    <p *ngSwitchDefault="'red'">
+        No conozco este color
+    </p>
+</div>
+
+<div [class.backYellow]="colorEmple=='yellow'">Prueba de clases</div>
+
+<div [ngClass]="{backYellow: colorEmple=='yellow',
+    backGreen: colorEmple=='green'}">
+    Prueba Clase doble condición</div>
