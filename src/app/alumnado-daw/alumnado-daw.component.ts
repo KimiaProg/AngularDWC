@@ -12,6 +12,7 @@ export class AlumnadoDAWComponent implements OnInit {
   public alumnos:Array<Alumnado>;
   public alumnadoUno:boolean;
   public alumnadoSegundo:boolean;
+
   constructor() {
     this.alumnos= [new Alumnado("Kimia","Ehsano","dd",new Date("2020-01-01"),"d",1,"1",["d","ds"]),
     new Alumnado("Juan","Ehsano","dd",new Date("2020-01-01"),"d",2,"2",["d","ds"]),
@@ -22,21 +23,24 @@ export class AlumnadoDAWComponent implements OnInit {
 
    }
 
-  alumnado1() {
-     if(this.alumnadoUno==true){
-      this.alumnadoUno=false;
-     }else{
-      this.alumnadoUno=true;
-     }
+  alumnado(curso:string) {
+    if(curso=='primero'){
+      if(this.alumnadoUno==true){
+        this.alumnadoUno=false;
+       }else{
+        this.alumnadoUno=true;
+       }
+    }else{
+      if(this.alumnadoSegundo==true){
+        this.alumnadoSegundo=false;
+       }else{
+         this.alumnadoSegundo=true;
+        }
+    }
+    
    }
 
-   alumnado2() {
-    if(this.alumnadoSegundo==true){
-     this.alumnadoSegundo=false;
-    }else{
-      this.alumnadoSegundo=true;
-     }
-  }
+   
   ngOnInit(): void {
   }
 

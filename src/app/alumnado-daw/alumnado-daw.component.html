@@ -1,5 +1,5 @@
 <p>alumnado-daw works!</p>
-<button (click)="alumnado1()">alumnado1</button>
+<button (click)="alumnado('primero')">alumnado1</button>
 <div *ngIf="alumnadoUno==true">
     <ul *ngFor="let alumno of alumnos">
         <li *ngIf="alumno.curso=='1'">{{alumno.nombre}}</li>
@@ -7,7 +7,7 @@
 </div>
 
 
-<button (click)="alumnado2()">alumnado2</button>
+<button (click)="alumnado('segundo')">alumnado2</button>
 <div *ngIf="alumnadoSegundo==true">
     <ul *ngFor="let alumno of alumnos">
         <li *ngIf="alumno.curso=='2'">{{alumno.nombre}}</li>
