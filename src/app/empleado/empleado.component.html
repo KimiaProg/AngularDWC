@@ -25,9 +25,12 @@
         No conozco este color
     </p>
 </div>
+<div [ngStyle]="{'width':'200px', 'height':'200px' , 'background-color' : colorEmple}"> Hola </div>
 
 <div [class.backYellow]="colorEmple=='yellow'">Prueba de clases</div>
 
 <div [ngClass]="{backYellow: colorEmple=='yellow',
     backGreen: colorEmple=='green'}">
     Prueba Clase doble condición</div>
+
+    <img [src]="'./img.jpg'">

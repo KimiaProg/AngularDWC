@@ -10,7 +10,7 @@ export class EmpleadoComponent implements OnInit {
   public emple:Empleado;
   public emples:Array<Empleado>;
   public colorEmple:string;
- 
+  public rutaImg:string;
 
   constructor() {
     this.emple=new Empleado("Kimia",24,"b",true);
@@ -18,6 +18,7 @@ export class EmpleadoComponent implements OnInit {
     new Empleado("ss",24,"b",true),
     new Empleado("aaaa",24,"b",false)]
     this.colorEmple="red";
+    this.rutaImg="s";
    }
 
   ngOnInit(): void {
