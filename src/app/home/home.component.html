@@ -1,1 +1,15 @@
 <p>home works!</p>
+<button (click)="alumCurso('1')">alumnado Curso 1</button>
+<button (click)="alumCurso('2')">alumnado curso 2</button>
+<ul *ngFor="let ropa of ropas">
+    <li>{{ropa}}</li>
+</ul>
+<input type="text" [(ngModel)]="ropa">
+<button (click)="aniadirRopa()">addRopa</button>
+<button (click)="borrarRopa()">DeleteRopa</button>
+
+<ul *ngFor="let ropa of ropas">
+    <li>{{ropa}} <button (click)="borrarRopaIndex(ropa)">borrarRopa</button></li>
+</ul>
+
+

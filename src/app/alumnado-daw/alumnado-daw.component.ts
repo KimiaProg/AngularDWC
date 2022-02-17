@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Alumnado } from "./alumnado";
-import {EmpleadoComponent } from "../empleado/empleado.component";
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-alumnado-daw',
@@ -12,15 +13,16 @@ export class AlumnadoDAWComponent implements OnInit {
   public alumnos:Array<Alumnado>;
   public alumnadoUno:boolean;
   public alumnadoSegundo:boolean;
+  public curso:string;
 
-  constructor() {
+  constructor(private actRout:ActivatedRoute) {
     this.alumnos= [new Alumnado("Kimia","Ehsano","dd",new Date("2020-01-01"),"d",1,"1",["d","ds"]),
     new Alumnado("Juan","Ehsano","dd",new Date("2020-01-01"),"d",2,"2",["d","ds"]),
     new Alumnado("Maria","Ehsano","dd",new Date("2020-01-01"),"d",2,"2",["d","ds"]),
     new Alumnado("David","Ehsano","dd",new Date("2020-01-01"),"d",2,"1",["d","ds"])];
     this.alumnadoUno=true;
     this.alumnadoSegundo=true;
-
+    this.curso= this.actRout.snapshot.params['curso'];
    }
 
   alumnado(curso:string) {

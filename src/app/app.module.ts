@@ -9,6 +9,8 @@ import { EmpleadoComponent } from './empleado/empleado.component';
 import { CocheComponent } from './coche/coche.component';
 import { HomeComponent } from './home/home.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import { ActivatedRoute,Router } from '@angular/router';
+import { PipePipe } from './pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import { ContactoComponent } from './contacto/contacto.component';
     EmpleadoComponent,
     CocheComponent,
     HomeComponent,
-    ContactoComponent
+    ContactoComponent,
+    PipePipe
   ],
   imports: [
     BrowserModule,
